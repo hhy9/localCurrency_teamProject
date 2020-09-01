@@ -116,13 +116,13 @@ const MerchanDetail = ({ isLogined }) => {
                     <tr>
                       <td></td>
                       <td>
-                        {(store.starRanking !==0) && (
+                        {(!!store.starRanking && store.starRanking !==0) && (
                           <>
                             &nbsp;&nbsp;별점 &nbsp;
                             <Stars store={store} />{" "}
                             {store.starRanking.toFixed(1)}/5
                           </>
-                        )}
+                      )}
                       </td>
                     </tr>
                     <tr>
